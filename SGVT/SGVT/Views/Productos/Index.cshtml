@@ -1,0 +1,53 @@
+﻿@model IEnumerable<SGVT.Models.Producto>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NpNombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NpDescripcion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Imagen)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EstadoProducto)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NpNombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NpDescripcion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Imagen)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EstadoProducto)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.PkIdProducto">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.PkIdProducto">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.PkIdProducto">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

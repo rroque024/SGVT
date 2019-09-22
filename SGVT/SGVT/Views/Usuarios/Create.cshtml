@@ -1,0 +1,72 @@
+﻿@model SGVT.Models.Usuario
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>Usuario</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="PkDni" class="control-label"></label>
+                <input asp-for="PkDni" class="form-control" />
+                <span asp-validation-for="PkDni" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NuNombre" class="control-label"></label>
+                <input asp-for="NuNombre" class="form-control" />
+                <span asp-validation-for="NuNombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NuApaterno" class="control-label"></label>
+                <input asp-for="NuApaterno" class="form-control" />
+                <span asp-validation-for="NuApaterno" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NuAmaterno" class="control-label"></label>
+                <input asp-for="NuAmaterno" class="form-control" />
+                <span asp-validation-for="NuAmaterno" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NuCorreo" class="control-label"></label>
+                <input asp-for="NuCorreo" class="form-control" />
+                <span asp-validation-for="NuCorreo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IuCelular" class="control-label"></label>
+                <input asp-for="IuCelular" class="form-control" />
+                <span asp-validation-for="IuCelular" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NuDireccion" class="control-label"></label>
+                <input asp-for="NuDireccion" class="form-control" />
+                <span asp-validation-for="NuDireccion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NuContraseña" class="control-label"></label>
+                <input asp-for="NuContraseña" class="form-control" />
+                <span asp-validation-for="NuContraseña" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FkIdTipoUsuario" class="control-label"></label>
+                <select asp-for="FkIdTipoUsuario" class ="form-control" asp-items="ViewBag.FkIdTipoUsuario"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

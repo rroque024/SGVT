@@ -1,0 +1,66 @@
+﻿@model SGVT.Models.Usuario
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Usuario</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NuNombre)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NuNombre)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NuApaterno)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NuApaterno)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NuAmaterno)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NuAmaterno)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NuCorreo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NuCorreo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IuCelular)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IuCelular)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NuDireccion)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NuDireccion)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NuContraseña)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NuContraseña)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FkIdTipoUsuarioNavigation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FkIdTipoUsuarioNavigation.PkIdTipoUsuario)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.PkDni">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

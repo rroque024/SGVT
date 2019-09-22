@@ -71,3 +71,9 @@ D:\Rodrigo\RepoGit\SGVT\SGVT\SGVT\obj\Debug\netcoreapp2.1\SGVT.Views.pdb
 D:\Rodrigo\RepoGit\SGVT\SGVT\SGVT\obj\Debug\netcoreapp2.1\SGVT.dll
 D:\Rodrigo\RepoGit\SGVT\SGVT\SGVT\obj\Debug\netcoreapp2.1\SGVT.pdb
 D:\Rodrigo\RepoGit\SGVT\SGVT\SGVT\obj\Debug\netcoreapp2.1\SGVT.csproj.CopyComplete
+D:\Rodrigo\RepoGit\SGVT\SGVT\SGVT\obj\Debug\netcoreapp2.1\SGVT.csprojAssemblyReference.cache
+D:\Rodrigo\RepoGit\SGVT\SGVT\SGVT\obj\Debug\netcoreapp2.1\Razor\Views\Productos\Create.g.cshtml.cs
+D:\Rodrigo\RepoGit\SGVT\SGVT\SGVT\obj\Debug\netcoreapp2.1\Razor\Views\Productos\Delete.g.cshtml.cs
+D:\Rodrigo\RepoGit\SGVT\SGVT\SGVT\obj\Debug\netcoreapp2.1\Razor\Views\Productos\Details.g.cshtml.cs
+D:\Rodrigo\RepoGit\SGVT\SGVT\SGVT\obj\Debug\netcoreapp2.1\Razor\Views\Productos\Edit.g.cshtml.cs
+D:\Rodrigo\RepoGit\SGVT\SGVT\SGVT\obj\Debug\netcoreapp2.1\Razor\Views\Productos\Index.g.cshtml.cs

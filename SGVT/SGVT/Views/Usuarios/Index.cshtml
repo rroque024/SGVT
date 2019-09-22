@@ -1,0 +1,77 @@
+﻿@model IEnumerable<SGVT.Models.Usuario>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NuNombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NuApaterno)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NuAmaterno)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NuCorreo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IuCelular)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NuDireccion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NuContraseña)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FkIdTipoUsuarioNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NuNombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NuApaterno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NuAmaterno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NuCorreo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IuCelular)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NuDireccion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NuContraseña)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FkIdTipoUsuarioNavigation.PkIdTipoUsuario)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.PkDni">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.PkDni">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.PkDni">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
