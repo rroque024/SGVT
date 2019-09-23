@@ -77,3 +77,8 @@ D:\Rodrigo\RepoGit\SGVT\SGVT\SGVT\obj\Debug\netcoreapp2.1\Razor\Views\Productos\
 D:\Rodrigo\RepoGit\SGVT\SGVT\SGVT\obj\Debug\netcoreapp2.1\Razor\Views\Productos\Details.g.cshtml.cs
 D:\Rodrigo\RepoGit\SGVT\SGVT\SGVT\obj\Debug\netcoreapp2.1\Razor\Views\Productos\Edit.g.cshtml.cs
 D:\Rodrigo\RepoGit\SGVT\SGVT\SGVT\obj\Debug\netcoreapp2.1\Razor\Views\Productos\Index.g.cshtml.cs
+D:\Rodrigo\RepoGit\SGVT\SGVT\SGVT\obj\Debug\netcoreapp2.1\Razor\Views\Usuarios\Create.g.cshtml.cs
+D:\Rodrigo\RepoGit\SGVT\SGVT\SGVT\obj\Debug\netcoreapp2.1\Razor\Views\Usuarios\Delete.g.cshtml.cs
+D:\Rodrigo\RepoGit\SGVT\SGVT\SGVT\obj\Debug\netcoreapp2.1\Razor\Views\Usuarios\Details.g.cshtml.cs
+D:\Rodrigo\RepoGit\SGVT\SGVT\SGVT\obj\Debug\netcoreapp2.1\Razor\Views\Usuarios\Edit.g.cshtml.cs
+D:\Rodrigo\RepoGit\SGVT\SGVT\SGVT\obj\Debug\netcoreapp2.1\Razor\Views\Usuarios\Index.g.cshtml.cs
