@@ -81,3 +81,4 @@ D:\Rodrigo\RepoGit\SGVT\SGVT\SGVT\obj\Debug\netcoreapp2.1\Razor\Views\Usuarios\D
 D:\Rodrigo\RepoGit\SGVT\SGVT\SGVT\obj\Debug\netcoreapp2.1\Razor\Views\Usuarios\Details.g.cshtml.cs
 D:\Rodrigo\RepoGit\SGVT\SGVT\SGVT\obj\Debug\netcoreapp2.1\Razor\Views\Usuarios\Edit.g.cshtml.cs
 D:\Rodrigo\RepoGit\SGVT\SGVT\SGVT\obj\Debug\netcoreapp2.1\Razor\Views\Usuarios\Index.g.cshtml.cs
+D:\Rodrigo\RepoGit\SGVT\SGVT\SGVT\obj\Debug\netcoreapp2.1\SGVT.csprojAssemblyReference.cache
