@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Repogit\\SGVT\\SGVT\\SGVT\\SGVT.csproj": {}
+    "D:\\repogit\\SGVT\\SGVT\\SGVT\\SGVT.csproj": {}
   },
   "projects": {
-    "D:\\Repogit\\SGVT\\SGVT\\SGVT\\SGVT.csproj": {
+    "D:\\repogit\\SGVT\\SGVT\\SGVT\\SGVT.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Repogit\\SGVT\\SGVT\\SGVT\\SGVT.csproj",
+        "projectUniqueName": "D:\\repogit\\SGVT\\SGVT\\SGVT\\SGVT.csproj",
         "projectName": "SGVT",
-        "projectPath": "D:\\Repogit\\SGVT\\SGVT\\SGVT\\SGVT.csproj",
+        "projectPath": "D:\\repogit\\SGVT\\SGVT\\SGVT\\SGVT.csproj",
         "packagesPath": "C:\\Users\\alumno.LABORATORIOS\\.nuget\\packages\\",
-        "outputPath": "D:\\Repogit\\SGVT\\SGVT\\SGVT\\obj\\",
+        "outputPath": "D:\\repogit\\SGVT\\SGVT\\SGVT\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
