@@ -1,17 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using SGVT.Models;
+using SGVT.ViewModels;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
+using SGVT.ViewModels;
 
 namespace SGVT.Controllers
 {
     public class ProductosController : Controller
     {
         private readonly BD_SGVTContext _context;
+        //private readonly IHostingEnvironment hostingEnvironment;
 
         public ProductosController(BD_SGVTContext context)
         {
@@ -47,25 +53,37 @@ namespace SGVT.Controllers
         {
             return View();
         }
-
-        // POST: Productos/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("PkIdProducto,NpNombre,NpDescripcion,Imagen,EstadoProducto")] Producto producto)
+   
+    // POST: Productos/Create
+    // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+    // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Create(Producto producto, IFormFile img)
+    {
+        if (ModelState.IsValid)
         {
-            if (ModelState.IsValid)
-            {
-                _context.Add(producto);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            return View(producto);
-        }
+                if (img != null && img.Length > 0)
+                {
+                    var fileName = Path.GetFileName(img.FileName);
+                    var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot\\Catalogo", fileName);
+                    using (var fileSteam = new FileStream(filePath, FileMode.Create))
+                    {
+                        await img.CopyToAsync(fileSteam);
+                    }
+                   // img.Image = fileName;
+                }
 
-        // GET: Productos/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+
+                _context.Add(producto);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
+        return View(producto);
+    }
+
+    // GET: Productos/Edit/5
+    public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
             {
