@@ -12537,27 +12537,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\alumno.LABORATORIOS\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Users\\rroqu\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Repogit\\SGVT\\SGVT\\SGVT\\SGVT.csproj",
+      "projectUniqueName": "D:\\Rodrigo\\RepoGit\\SGVT\\SGVT\\SGVT\\SGVT.csproj",
       "projectName": "SGVT",
-      "projectPath": "D:\\Repogit\\SGVT\\SGVT\\SGVT\\SGVT.csproj",
-      "packagesPath": "C:\\Users\\alumno.LABORATORIOS\\.nuget\\packages\\",
-      "outputPath": "D:\\Repogit\\SGVT\\SGVT\\SGVT\\obj\\",
+      "projectPath": "D:\\Rodrigo\\RepoGit\\SGVT\\SGVT\\SGVT\\SGVT.csproj",
+      "packagesPath": "C:\\Users\\rroqu\\.nuget\\packages\\",
+      "outputPath": "D:\\Rodrigo\\RepoGit\\SGVT\\SGVT\\SGVT\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\alumno.LABORATORIOS\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\rroqu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.1"

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 
 namespace SGVT.Models
@@ -13,7 +14,7 @@ namespace SGVT.Models
         public int PkIdProducto { get; set; }
         public string NpNombre { get; set; }
         public string NpDescripcion { get; set; }
-        public byte[] Imagen { get; set; }
+        public IFormFile Imagen { get; set; }
         public bool? EstadoProducto { get; set; }
 
         public ICollection<Pedido> Pedido { get; set; }
