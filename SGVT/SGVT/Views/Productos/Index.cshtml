@@ -10,7 +10,7 @@ Gestionar Producto
     <a  class="btn btn-primary"  asp-action="Create">Registrar Producto<span class="glyphicon glyphicon-plus"></span>   </a>
     
 </p>
-<table class="table table-striped table-bordered table-hover" >
+<table class="table table-striped table-bordered table-hover" enctype="multipart/form-data">
     <thead>
         <tr>
             <th>
@@ -20,7 +20,7 @@ Gestionar Producto
                 @Html.DisplayNameFor(model => model.NpDescripcion)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Imagen)
+                Imagen
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.EstadoProducto)
@@ -38,7 +38,8 @@ Gestionar Producto
                 @Html.DisplayFor(modelItem => item.NpDescripcion)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Imagen)
+                @*@Html.DisplayFor(modelItem => item.Imagen)*@
+                <img class="img-thumbnail" src="@item.Imagen" asp-append-version="true" alt="@item.Imagen" />
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.EstadoProducto)

@@ -11,14 +11,17 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using SGVT.Models;
+using Microsoft.Extensions.FileProviders;
+using System.IO;
 
 namespace SGVT
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public Startup(IConfiguration configuration )
         {
             Configuration = configuration;
+            
         }
 
         public IConfiguration Configuration { get; }
@@ -36,6 +39,9 @@ namespace SGVT
             //services.AddRazorPages();
             var connection = Configuration.GetConnectionString("DefaultConnection");
             services.AddDbContext<BD_SGVTContext>(options => options.UseSqlServer(connection));
+            services.AddSingleton<IFileProvider>(
+                    new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/Catalogo"))
+                    );
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }

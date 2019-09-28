@@ -10,23 +10,28 @@ using SGVT.Models;
 using SGVT.ViewModels;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using SGVT.ViewModels;
+using Microsoft.Extensions.FileProviders;
 
 namespace SGVT.Controllers
 {
     public class ProductosController : Controller
     {
         private readonly BD_SGVTContext _context;
-        //private readonly IHostingEnvironment hostingEnvironment;
+        private readonly IFileProvider fileProvider;
+        private readonly IHostingEnvironment hostingEnvironment;
+        
 
-        public ProductosController(BD_SGVTContext context)
+        public ProductosController(BD_SGVTContext context, IFileProvider fileprovider, IHostingEnvironment env)
         {
             _context = context;
+            fileProvider = fileprovider;
+            hostingEnvironment = env;
         }
 
         // GET: Productos
         public async Task<IActionResult> Index()
         {
+            ViewData["MainPath"] = Directory.GetCurrentDirectory();
             return View(await _context.Producto.ToListAsync());
         }
 
@@ -59,31 +64,39 @@ namespace SGVT.Controllers
     // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Create(Producto producto, IFormFile img)
-    {
-        if (ModelState.IsValid)
+        public async Task<IActionResult> Create([Bind("PkIdProducto,NpNombre,NpDescripcion,Imagen,EstadoProducto")] Producto producto, IFormFile file)
         {
-                if (img != null && img.Length > 0)
+            if (ModelState.IsValid)
+            {
+                _context.Add(producto);
+                await _context.SaveChangesAsync();
+                if (file != null || file.Length != 0)
                 {
-                    var fileName = Path.GetFileName(img.FileName);
-                    var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot\\Catalogo", fileName);
-                    using (var fileSteam = new FileStream(filePath, FileMode.Create))
+                    FileInfo fi = new FileInfo(file.FileName);
+                    var newFilename = producto.PkIdProducto + "_" + String.Format("{0:d}", (DateTime.Now.Ticks / 10) % 100000000) + fi.Extension;
+                    var webPath = hostingEnvironment.WebRootPath;
+                    var path = Path.Combine("", webPath + @"\Catalogo\" + newFilename);
+                    var pathToSave = @"/Catalogo/" + newFilename;
+                    using (var stream = new FileStream(path, FileMode.Create))
                     {
-                        await img.CopyToAsync(fileSteam);
+                        await file.CopyToAsync(stream);
                     }
-                   // img.Image = fileName;
+                    producto.Imagen = pathToSave;
+                    _context.Update(producto);
+                    await _context.SaveChangesAsync();
                 }
 
 
-                _context.Add(producto);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-        }
-        return View(producto);
-    }
 
-    // GET: Productos/Edit/5
-    public async Task<IActionResult> Edit(int? id)
+
+                return RedirectToAction(nameof(Index));
+            }
+            return View(producto);
+        }
+
+
+        // GET: Productos/Edit/5
+        public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
             {
