@@ -13,10 +13,16 @@ namespace SGVT.Models
         [Key]
         public int PkIdProducto { get; set; }
         [Required]
-        [Display(Name = "Ingresar el nombre del producto")]
+        [Display(Name = "Nombre")]
         public string NpNombre { get; set; }
+        [Required]
+        [Display(Name = "Descripción")]
         public string NpDescripcion { get; set; }
+
+        [Required]
         public string Imagen { get; set; }
+        
+        [Display(Name = "Estado ")]
         public bool? EstadoProducto { get; set; }
 
         public ICollection<Pedido> Pedido { get; set; }

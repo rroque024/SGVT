@@ -40,14 +40,16 @@ Gestionar Producto
             <td>
                 @*@Html.DisplayFor(modelItem => item.Imagen)*@
                 <img class="img-thumbnail" src="@item.Imagen" asp-append-version="true" alt="@item.Imagen" />
+                @*<img class="img-responsive" src="@Url.Content("~/wwwroot/Catalogo/" + @item.Imagen)" alt="@item.Imagen">*@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.EstadoProducto)
+                @*@Html.DropDownList("MyTestList", null, new { @class = "btn btn-default dropdown-toggle" })*@
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.PkIdProducto">Editar</a> |
-                <a asp-action="Details" asp-route-id="@item.PkIdProducto">Detalles</a> |
-                <a asp-action="Delete" asp-route-id="@item.PkIdProducto">Eliminar</a>
+                <a  class="btn btn-outline-warning" asp-action="Edit" asp-route-id="@item.PkIdProducto">Editar</a> |
+                <a class="btn btn-outline-info" asp-action="Details" asp-route-id="@item.PkIdProducto">Detalles</a> |
+                <a  class="btn btn-outline-danger" asp-action="Delete" asp-route-id="@item.PkIdProducto">Eliminar</a>
             </td>
         </tr>
 }
