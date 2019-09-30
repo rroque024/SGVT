@@ -11,8 +11,8 @@ namespace SGVT.Models
             Cotizacion = new HashSet<Cotizacion>();
         }
         [Required(ErrorMessage ="Este Campo es Obligatorio")]
-        [Range(8,11), DataType(DataType.Currency)]
-        [RegularExpression("^[0-9]*$", ErrorMessage = "* Solo se permiten números.")]
+        //[Range(8,11), DataType(DataType.Currency)]
+        //[RegularExpression("^[0-9]*$", ErrorMessage = "* Solo se permiten números.")]
         public int PkDni { get; set; }
         
         [Required(ErrorMessage = "Este Campo es Obligatorio")]

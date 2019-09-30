@@ -17,15 +17,15 @@ namespace SGVT.Controllers
     public class ProductosController : Controller
     {
         private readonly BD_SGVTContext _context;
-        private readonly IFileProvider fileProvider;
-        private readonly IHostingEnvironment hostingEnvironment;
+        private readonly IFileProvider _fileProvider;
+        private readonly IHostingEnvironment _hostingEnvironment;
         
 
         public ProductosController(BD_SGVTContext context, IFileProvider fileprovider, IHostingEnvironment env)
         {
             _context = context;
-            fileProvider = fileprovider;
-            hostingEnvironment = env;
+            _fileProvider = fileprovider;
+            _hostingEnvironment = env;
         }
 
         // GET: Productos
@@ -74,7 +74,7 @@ namespace SGVT.Controllers
                 {
                     FileInfo fi = new FileInfo(file.FileName);
                     var newFilename = producto.PkIdProducto + "_" + String.Format("{0:d}", (DateTime.Now.Ticks / 10) % 100000000) + fi.Extension;
-                    var webPath = hostingEnvironment.WebRootPath;
+                    var webPath = _hostingEnvironment.WebRootPath;
                     var path = Path.Combine("", webPath + @"\Catalogo\" + newFilename);
                     var pathToSave = @"/Catalogo/" + newFilename;
                     using (var stream = new FileStream(path, FileMode.Create))
@@ -85,9 +85,6 @@ namespace SGVT.Controllers
                     _context.Update(producto);
                     await _context.SaveChangesAsync();
                 }
-
-
-
 
                 return RedirectToAction(nameof(Index));
             }

@@ -38,9 +38,9 @@
                 <label asp-for="EstadoProducto" class="control-label">Estado del Producto</label>
                 <br />
                 @*<input asp-for="EstadoProducto" class="form-control" />*@
-                <select asp-for="EstadoProducto" name="Seleccione un Estado">
-                    <option value="1">Visible</option>
-                    <option value="0">Oculto</option>
+                <select asp-for="EstadoProducto" id="estado" name="estado" >
+                    <option value="true">Visible</option>
+                    <option value="false">Oculto</option>
                 </select>
                 <span asp-validation-for="EstadoProducto" class="text-danger"></span>
             </div>
@@ -66,6 +66,19 @@
             });
         });
     </script>
+
+    @*<script type="text/javascript">
+        function ShowSelected() {
+            /* Para obtener el valor */
+            var cod = document.getElementById("estado").value;
+            alert(cod);
+
+            /* Para obtener el texto */
+            var combo = document.getElementById("estado");
+            var selected = combo.options[combo.selectedIndex].text;
+            alert(selected);
+        }
+    </script>*@
 
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }

@@ -56,7 +56,6 @@ D:\Rodrigo\RepoGit\SGVT\SGVT\SGVT\obj\Debug\netcoreapp2.1\SGVT.TagHelpers.input.
 D:\Rodrigo\RepoGit\SGVT\SGVT\SGVT\obj\Debug\netcoreapp2.1\SGVT.TagHelpers.output.cache
 D:\Rodrigo\RepoGit\SGVT\SGVT\SGVT\obj\Debug\netcoreapp2.1\SGVT.RazorCoreGenerate.cache
 D:\Rodrigo\RepoGit\SGVT\SGVT\SGVT\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.g.cshtml.cs
-D:\Rodrigo\RepoGit\SGVT\SGVT\SGVT\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.g.cshtml.cs
 D:\Rodrigo\RepoGit\SGVT\SGVT\SGVT\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
 D:\Rodrigo\RepoGit\SGVT\SGVT\SGVT\obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.g.cshtml.cs
 D:\Rodrigo\RepoGit\SGVT\SGVT\SGVT\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.g.cshtml.cs
@@ -123,4 +122,3 @@ D:\Repogit\SGVT\SGVT\SGVT\obj\Debug\netcoreapp2.1\SGVT.Views.pdb
 D:\Repogit\SGVT\SGVT\SGVT\obj\Debug\netcoreapp2.1\SGVT.dll
 D:\Repogit\SGVT\SGVT\SGVT\obj\Debug\netcoreapp2.1\SGVT.pdb
 D:\Repogit\SGVT\SGVT\SGVT\obj\Debug\netcoreapp2.1\SGVT.csproj.CopyComplete
-D:\Rodrigo\RepoGit\SGVT\SGVT\SGVT\obj\Debug\netcoreapp2.1\SGVT.csprojAssemblyReference.cache

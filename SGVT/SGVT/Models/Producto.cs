@@ -19,7 +19,7 @@ namespace SGVT.Models
         [Display(Name = "Descripción")]
         public string NpDescripcion { get; set; }
 
-        [Required]
+        
         public string Imagen { get; set; }
         
         [Display(Name = "Estado ")]
