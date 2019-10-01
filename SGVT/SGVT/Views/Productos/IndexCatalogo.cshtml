@@ -9,27 +9,35 @@
 
 <div class="container">
 
-    <div class="row">
+    <div class="container-fluid">
         @foreach (var item in Model)
         {
 
-            <div class="col-lg-4">
+            @*<div class="col-lg-4 col-sm-6 col-12">*@
 
-                <div class="panel panel-default col-lg-4">
-                    <div class="panel-heading ">@Html.DisplayFor(modelItem => item.NpNombre)</div>
-                    <div class="panel-body">
-                        <img class="img-thumbnail" src="@item.Imagen" asp-append-version="true" alt="@item.Imagen" />
+        <div class="album py-5 bg-light">
 
+            <div class="panel panel-default col-lg-4">
+                <div class="panel-heading  ">@Html.DisplayFor(modelItem => item.NpNombre)</div>
+                <div class="panel-body ">
+                    <img class="card-img-overlay img-thumbnail" src="@item.Imagen" asp-append-version="true" alt="@item.Imagen " height="300" width="300" />
+
+                    <div class="card-body px-3">
                         <p>@Html.DisplayFor(modelItem => item.NpDescripcion)</p>
+                    </div>
+                    <p>
+                        <a class="btn btn-primary" href="">Cotizar   <span class="glyphicon glyphicon-bell "></span>   </a>
 
-                        <
-</div>
+                    </p>
+
                 </div>
-
             </div>
+        </div>
+
+
 
         }
-
+    </div>
 
 
 

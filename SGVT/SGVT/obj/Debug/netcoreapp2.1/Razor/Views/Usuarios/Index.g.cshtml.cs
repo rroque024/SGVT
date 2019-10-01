@@ -66,7 +66,7 @@ using SGVT.Models;
             WriteLiteral("\r\n<h2>Index</h2>\r\n\r\n<p>\r\n    ");
             EndContext();
             BeginContext(113, 50, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "35f961f387c0423089ea2655e7828e3f", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a3cecaab49884cd68347c96537bae4d5", async() => {
                 BeginContext(136, 23, true);
                 WriteLiteral("Registrar Nuevo Usuario");
                 EndContext();
@@ -256,7 +256,7 @@ using SGVT.Models;
             WriteLiteral("\r\n            </td>\r\n            <td>\r\n                ");
             EndContext();
             BeginContext(2032, 58, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ad5dc83986c343599bff9266e5ff36b9", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9715f34ab96e425f9f82018ba5ebc067", async() => {
                 BeginContext(2080, 6, true);
                 WriteLiteral("Editar");
                 EndContext();
@@ -291,7 +291,7 @@ using SGVT.Models;
             WriteLiteral(" |\r\n                ");
             EndContext();
             BeginContext(2110, 63, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "efe223b5906c4d89b10bd040f399337e", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cf44ccb815a84966916b569dfaa382ec", async() => {
                 BeginContext(2161, 8, true);
                 WriteLiteral("Detalles");
                 EndContext();
@@ -326,7 +326,7 @@ using SGVT.Models;
             WriteLiteral(" |\r\n                ");
             EndContext();
             BeginContext(2193, 62, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "65e8115336404a038b59bece896e3101", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "58ffeb9c9c834db89dbd9269573190e5", async() => {
                 BeginContext(2243, 8, true);
                 WriteLiteral("Eliminar");
                 EndContext();
