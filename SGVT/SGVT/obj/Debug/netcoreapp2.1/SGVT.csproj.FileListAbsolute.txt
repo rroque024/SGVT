@@ -122,3 +122,5 @@ D:\Repogit\SGVT\SGVT\SGVT\obj\Debug\netcoreapp2.1\SGVT.Views.pdb
 D:\Repogit\SGVT\SGVT\SGVT\obj\Debug\netcoreapp2.1\SGVT.dll
 D:\Repogit\SGVT\SGVT\SGVT\obj\Debug\netcoreapp2.1\SGVT.pdb
 D:\Repogit\SGVT\SGVT\SGVT\obj\Debug\netcoreapp2.1\SGVT.csproj.CopyComplete
+D:\Rodrigo\RepoGit\SGVT\SGVT\SGVT\obj\Debug\netcoreapp2.1\SGVT.csprojAssemblyReference.cache
+D:\Rodrigo\RepoGit\SGVT\SGVT\SGVT\obj\Debug\netcoreapp2.1\Razor\Views\Productos\IndexCatalogo.g.cshtml.cs

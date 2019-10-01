@@ -1,0 +1,42 @@
+﻿@model IEnumerable<SGVT.Models.Producto>
+
+@{
+    ViewData["Title"] = "IndexCatalogo";
+}
+
+<h2>Catálogo de Productos</h2>
+<hr />
+
+<div class="container">
+
+    <div class="row">
+        @foreach (var item in Model)
+        {
+
+            <div class="col-lg-4">
+
+                <div class="panel panel-default col-lg-4">
+                    <div class="panel-heading ">@Html.DisplayFor(modelItem => item.NpNombre)</div>
+                    <div class="panel-body">
+                        <img class="img-thumbnail" src="@item.Imagen" asp-append-version="true" alt="@item.Imagen" />
+
+                        <p>@Html.DisplayFor(modelItem => item.NpDescripcion)</p>
+
+                        <
+</div>
+                </div>
+
+            </div>
+
+        }
+
+
+
+
+
+    </div>
+
+
+
+</div>
+

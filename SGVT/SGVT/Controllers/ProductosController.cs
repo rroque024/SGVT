@@ -11,6 +11,8 @@ using SGVT.ViewModels;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.FileProviders;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace SGVT.Controllers
 {
@@ -32,8 +34,34 @@ namespace SGVT.Controllers
         public async Task<IActionResult> Index()
         {
             ViewData["MainPath"] = Directory.GetCurrentDirectory();
+            //ViewBag.IndexCatalogo= 
             return View(await _context.Producto.ToListAsync());
         }
+
+        //Muestra en el catálogo
+        public async Task<IActionResult> IndexCatalogo()
+        {
+            ViewData["MainPath"] = Directory.GetCurrentDirectory();
+            //ViewBag.IndexCatalogo= 
+            return View(await _context.Producto.ToListAsync());
+        }
+
+
+
+
+        //public List<Producto> ConsultarProducto() {
+
+        //    SqlConnection conn = (SqlConnection)_context.Database.GetDbConnection();
+        //    SqlCommand cmd = conn.CreateCommand();
+        //    conn.Open();
+        //    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+        //    cmd.CommandText = "sp_ConsultaProducto";
+        //    cmd.ExecuteNonQuery();
+        //    conn.Close();
+        //    return 1;
+
+
+        //}
 
         // GET: Productos/Details/5
         public async Task<IActionResult> Details(int? id)
