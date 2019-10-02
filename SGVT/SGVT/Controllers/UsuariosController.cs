@@ -19,12 +19,17 @@ namespace SGVT.Controllers
             _context = context;
         }
 
+        public IActionResult InicioSesion()
+        {
+            return View();
+        }
         // GET: Usuarios
         public async Task<IActionResult> Index()
         {
             var bD_SGVTContext = _context.Usuario.Include(u => u.FkIdTipoUsuarioNavigation);
             return View(await bD_SGVTContext.ToListAsync());
         }
+
 
         // GET: Usuarios/Details/5
         public async Task<IActionResult> Details(int? id)
@@ -170,9 +175,12 @@ namespace SGVT.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        private bool UsuarioExists(int id)
+       
+            private bool UsuarioExists(int id)
         {
             return _context.Usuario.Any(e => e.PkDni == id);
         }
     }
+ 
+    
 }

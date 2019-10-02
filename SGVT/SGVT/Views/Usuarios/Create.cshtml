@@ -4,12 +4,25 @@
     ViewData["Title"] = "Create";
 }
 
-<h2>Registrar Usuario</h2>
-
+<section class="banner_area">
+    <div class="banner_inner d-flex align-items-center">
+        <div class="container">
+            <div class="banner_content text-center">
+                <h2>Shop Category Page</h2>
+                <div class="page_link">
+                    <a href="index.html">Home</a>
+                    <a href="category.html">Category</a>
+                    <a href="category.html">Women Fashion</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 <hr />
-<div class="row">
-    <div class="col-md-4">
+<section>
+<div class="row" >
+    <div class="col-md-4" style="margin-left: auto; margin-right: auto; display: block; text-align: left;">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
@@ -61,13 +74,15 @@
                 <input type="submit" value="Registrar" class="btn btn-default" />
             </div>
         </form>
+        <a asp-action="Index">Volver a la lista </a>
     </div>
+
 </div>
 
 <div>
-    <a asp-action="Index">Volver a la lista </a>
+   
 </div>
-
+</section>
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }

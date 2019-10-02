@@ -4,13 +4,23 @@
 @{
     ViewData["Title"] = "Create";
 }
+<section class="banner_area">
+    <div class="banner_inner d-flex align-items-center">
+        <div class="container">
+            <div class="banner_content text-center">
+                <h2>Shop Category Page</h2>
+                <div class="page_link">
+                    <a href="index.html">Home</a>
+                    <a href="category.html">Category</a>
+                    <a href="category.html">Women Fashion</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-<h2>Registrar Producto</h2>
-
-
-<hr />
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-4" style="margin-left: auto; margin-right: auto; display: block; text-align: left;">
         <form enctype="multipart/form-data" asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
@@ -38,7 +48,7 @@
                 <label asp-for="EstadoProducto" class="control-label">Estado del Producto</label>
                 <br />
                 @*<input asp-for="EstadoProducto" class="form-control" />*@
-                <select asp-for="EstadoProducto" id="estado" name="estado" >
+                <select asp-for="EstadoProducto" id="estado" name="estado">
                     <option value="true">Visible</option>
                     <option value="false">Oculto</option>
                 </select>
@@ -51,10 +61,11 @@
             </div>
         </form>
     </div>
+    <a asp-action="Index">Regresar a la lista</a>
 </div>
 
 <div>
-    <a asp-action="Index">Regresar a la lista</a>
+   
 </div>
 
 @section Scripts {
@@ -68,17 +79,17 @@
     </script>
 
     @*<script type="text/javascript">
-        function ShowSelected() {
-            /* Para obtener el valor */
-            var cod = document.getElementById("estado").value;
-            alert(cod);
+            function ShowSelected() {
+                /* Para obtener el valor */
+                var cod = document.getElementById("estado").value;
+                alert(cod);
 
-            /* Para obtener el texto */
-            var combo = document.getElementById("estado");
-            var selected = combo.options[combo.selectedIndex].text;
-            alert(selected);
-        }
-    </script>*@
+                /* Para obtener el texto */
+                var combo = document.getElementById("estado");
+                var selected = combo.options[combo.selectedIndex].text;
+                alert(selected);
+            }
+        </script>*@
 
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }

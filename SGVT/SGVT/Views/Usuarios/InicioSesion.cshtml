@@ -1,0 +1,39 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="login_box_area p_120">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="login_box_img">
+                    <img class="img-fluid" src="~/img/login.jpg" alt="">
+                    <div class="hover">
+                        <h4>Nuevo en este sitio web?</h4>
+                        <p>Quieres registrarte ?</p>
+                        <a class="main_btn" href="~/Usuarios/Create">Create an Account</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="login_form_inner">
+                    <h3>Ingresar para entrar</h3>
+                    <form class="row login_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+                        <div class="col-md-12 form-group">
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Usuario">
+                        </div>
+                        <div class="col-md-12 form-group">
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Contraseña">
+                        </div>
+                      
+                        <div class="col-md-12 form-group">
+                            <button type="submit" value="submit" class="btn submit_btn">INGRESAR</button>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
