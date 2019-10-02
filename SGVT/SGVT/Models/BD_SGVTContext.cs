@@ -251,7 +251,7 @@ namespace SGVT.Models
 
                 entity.Property(e => e.EstadoProducto).HasColumnName("Estado_Producto");
 
-                entity.Property(e => e.Imagen).HasColumnType("image");
+                entity.Property(e => e.Imagen).HasColumnName("Imagen");
 
                 entity.Property(e => e.NpDescripcion)
                     .HasColumnName("NP_Descripcion")

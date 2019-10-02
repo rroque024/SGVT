@@ -4,9 +4,20 @@
     ViewData["Title"] = "Delete";
 }
 
-<h2>Delete</h2>
-
-<h3>Are you sure you want to delete this?</h3>
+<section class="banner_area">
+    <div class="banner_inner d-flex align-items-center">
+        <div class="container">
+            <div class="banner_content text-center">
+                <h2>Shop Category Page</h2>
+                <div class="page_link">
+                    <a href="index.html">Home</a>
+                    <a href="category.html">Category</a>
+                    <a href="category.html">Women Fashion</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <div>
     <h4>Usuario</h4>
     <hr />
@@ -60,7 +71,7 @@
             @Html.DisplayFor(model => model.FkIdTipoUsuarioNavigation.PkIdTipoUsuario)
         </dd>
     </dl>
-    
+
     <form asp-action="Delete">
         <input type="hidden" asp-for="PkDni" />
         <input type="submit" value="Delete" class="btn btn-default" /> |

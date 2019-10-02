@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <Folder Include="Views\View_Administrador\" />
+    <Folder Include="wwwroot\Catalogo\" />
   </ItemGroup>
 
 </Project>

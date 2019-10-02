@@ -4,11 +4,21 @@
     ViewData["Title"] = "Index";
 }
 
-<h2>Index</h2>
+<section class="banner_area">
+    <div class="banner_inner d-flex align-items-center">
+        <div class="container">
+            <div class="banner_content text-center">
+                <h2>Shop Category Page</h2>
+                <div class="page_link">
+                    <a href="index.html">Home</a>
+                    <a href="category.html">Category</a>
+                    <a href="category.html">Women Fashion</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
 <table class="table">
     <thead>
         <tr>
@@ -67,9 +77,9 @@
                 @Html.DisplayFor(modelItem => item.FkIdTipoUsuarioNavigation.PkIdTipoUsuario)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.PkDni">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.PkDni">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.PkDni">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.PkDni">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.PkDni">Detalles</a> |
+                <a asp-action="Delete" asp-route-id="@item.PkDni">Eliminar</a>
             </td>
         </tr>
 }

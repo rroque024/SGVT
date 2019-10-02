@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using SGVT.Models;
+using System.Data.SqlClient;
 
 namespace SGVT.Controllers
 {
@@ -18,12 +19,17 @@ namespace SGVT.Controllers
             _context = context;
         }
 
+        public IActionResult InicioSesion()
+        {
+            return View();
+        }
         // GET: Usuarios
         public async Task<IActionResult> Index()
         {
             var bD_SGVTContext = _context.Usuario.Include(u => u.FkIdTipoUsuarioNavigation);
             return View(await bD_SGVTContext.ToListAsync());
         }
+
 
         // GET: Usuarios/Details/5
         public async Task<IActionResult> Details(int? id)
@@ -60,8 +66,26 @@ namespace SGVT.Controllers
         {
             if (ModelState.IsValid)
             {
-                _context.Add(usuario);
-                await _context.SaveChangesAsync();
+                SqlConnection conn = (SqlConnection) _context.Database.GetDbConnection();
+                SqlCommand cmd = conn.CreateCommand();
+                conn.Open();
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                cmd.CommandText = "sp_RegistrarCliente";
+                cmd.Parameters.Add("@PK_Dni",System.Data.SqlDbType.Int).Value= usuario.PkDni;
+                cmd.Parameters.Add("@NU_Nombre", System.Data.SqlDbType.NVarChar,20).Value=usuario.NuNombre;
+                cmd.Parameters.Add("@NU_APaterno", System.Data.SqlDbType.NVarChar,20).Value=usuario.NuApaterno;
+                cmd.Parameters.Add("@NU_AMaterno" , System.Data.SqlDbType.NVarChar,20).Value=usuario.NuAmaterno;
+                cmd.Parameters.Add("@NU_Correo",System.Data.SqlDbType.NVarChar,30).Value=usuario.NuCorreo;
+                cmd.Parameters.Add("@IU_Celular",System.Data.SqlDbType.Int).Value=usuario.IuCelular;
+                cmd.Parameters.Add("@NU_Direccion",System.Data.SqlDbType.NVarChar,50).Value=usuario.NuDireccion;
+                cmd.Parameters.Add("@NU_Constraseña", System.Data.SqlDbType.NVarChar, 50).Value = usuario.NuContraseña;
+                cmd.ExecuteNonQuery();
+                conn.Close();
+
+
+                //EF Core
+                //_context.Add(usuario);
+                //await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
             ViewData["FkIdTipoUsuario"] = new SelectList(_context.TipoUsuario, "PkIdTipoUsuario", "PkIdTipoUsuario", usuario.FkIdTipoUsuario);
@@ -151,9 +175,12 @@ namespace SGVT.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        private bool UsuarioExists(int id)
+       
+            private bool UsuarioExists(int id)
         {
             return _context.Usuario.Any(e => e.PkDni == id);
         }
     }
+ 
+    
 }

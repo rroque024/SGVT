@@ -12544,11 +12544,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Repogit\\SGVT\\SGVT\\SGVT\\SGVT.csproj",
+      "projectUniqueName": "H:\\SGVT-Rodrigo (3)\\SGVT-Rodrigo\\SGVT\\SGVT\\SGVT.csproj",
       "projectName": "SGVT",
-      "projectPath": "D:\\Repogit\\SGVT\\SGVT\\SGVT\\SGVT.csproj",
+      "projectPath": "H:\\SGVT-Rodrigo (3)\\SGVT-Rodrigo\\SGVT\\SGVT\\SGVT.csproj",
       "packagesPath": "C:\\Users\\alumno.LABORATORIOS\\.nuget\\packages\\",
-      "outputPath": "D:\\Repogit\\SGVT\\SGVT\\SGVT\\obj\\",
+      "outputPath": "H:\\SGVT-Rodrigo (3)\\SGVT-Rodrigo\\SGVT\\SGVT\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
