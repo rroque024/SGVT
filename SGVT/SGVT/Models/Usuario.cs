@@ -10,9 +10,9 @@ namespace SGVT.Models
         {
             Cotizacion = new HashSet<Cotizacion>();
         }
-        [Required(ErrorMessage ="Este Campo es Obligatorio")]
-        //[Range(8,11), DataType(DataType.Currency)]
-        //[RegularExpression("^[0-9]*$", ErrorMessage = "* Solo se permiten números.")]
+        [Required(ErrorMessage = "Este Campo es Obligatorio")]
+        [Range(00000000, 99999999, ErrorMessage = "Campo valido de 8 digitos")]
+        [RegularExpression("^[0-9]*$", ErrorMessage = "* Solo se permiten números.")]
         public int PkDni { get; set; }
         
         [Required(ErrorMessage = "Este Campo es Obligatorio")]
@@ -30,6 +30,7 @@ namespace SGVT.Models
         public string NuCorreo { get; set; }
 
         [Required(ErrorMessage = "Este Campo es Obligatorio")]
+        [Range(100000000, 999999999, ErrorMessage = "Campo valido de 9 digitos")]
         [RegularExpression("^[0-9]*$", ErrorMessage = "* Solo se permiten números.")]
         public int IuCelular { get; set; }
 
@@ -38,6 +39,7 @@ namespace SGVT.Models
 
         [DataType(DataType.Password)]
         [Display(Name ="Confirma Tu Contraseña")]
+        [Required(ErrorMessage = "Este Campo es Obligatorio")]
         public string NuContraseña { get; set; }
         public int FkIdTipoUsuario { get; set; }
 
